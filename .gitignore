@@ -21,6 +21,7 @@
 # public
 /public/sw.js
 /public/workbox-*.js
+/public/*.js.map
 
 # production
 /build
