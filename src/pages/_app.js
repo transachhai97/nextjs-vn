@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import whyDidYouRender from '@welldone-software/why-did-you-render';
+import Toastify from '@/components/Toastify';
 
 import '@/styles/index.scss';
 
@@ -39,6 +40,7 @@ export default function MyApp({ Component, pageProps }) {
                 <link rel="apple-touch-icon" href="/apple-icon.png" />
                 <meta name="theme-color" content="#317EFB" />
             </Head>
+            <Toastify />
             <Component {...pageProps} />
         </>
     );

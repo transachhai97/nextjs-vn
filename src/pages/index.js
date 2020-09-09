@@ -1,4 +1,6 @@
 import Head from 'next/head';
+import { toast } from 'react-toastify';
+
 import styles from '@/styles/Home.scss';
 
 function Home() {
@@ -19,7 +21,11 @@ function Home() {
                     <code className={styles.code}>pages/index.js</code>
                 </p>
 
-                <button type="button" className={styles.btnNotify}>
+                <button
+                    type="button"
+                    className={styles.btnNotify}
+                    onClick={() => toast('Wow so easy !')}
+                >
                     Button
                 </button>
 
