@@ -2,11 +2,14 @@ const path = require('path');
 const withPlugins = require('next-compose-plugins');
 const withPWA = require('next-pwa')
 const runtimeCaching = require('next-pwa/cache')
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const {
     WebpackBundleSizeAnalyzerPlugin,
 } = require('webpack-bundle-size-analyzer')
+
 const {ANALYZE} = process.env
+const isProduction = process.env.NODE_ENV === 'production';
 
 const nextConfig = {
     // Target must be serverless
@@ -27,6 +30,21 @@ const nextConfig = {
 
         if (ANALYZE) {
             config.plugins.push(new WebpackBundleSizeAnalyzerPlugin('stats.txt'))
+        }
+
+        if (isProduction) {
+            config.plugins.push(
+                new CopyWebpackPlugin(
+                    {
+                        patterns: [
+                            {
+                                from: path.join(__dirname, 'docs'),
+                                to: path.join(__dirname, 'public/docs'),
+                            },
+                        ],
+                    },
+                ),
+            );
         }
 
         // Important: return the modified config

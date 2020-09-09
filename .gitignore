@@ -23,6 +23,7 @@
 /public/workbox-*.js
 /public/*.js.map
 /public/sitemap.xml
+/public/docs/
 
 # production
 /build
