@@ -87,6 +87,7 @@ module.exports = withPlugins(
             withPWA,
             {
                 pwa: {
+                    disable: !isProduction,
                     dest: 'public',
                     runtimeCaching,
                 },

@@ -3,12 +3,21 @@ import Head from 'next/head';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import whyDidYouRender from '@welldone-software/why-did-you-render';
 import Toastify from '@/components/Toastify';
+import Router from 'next/router';
+import NProgress from 'nprogress';
 
 import '@/styles/index.scss';
 
 if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
     whyDidYouRender(React);
 }
+
+// eslint-disable-next-line no-unused-vars
+Router.events.on('routeChangeStart', (url) => {
+    NProgress.start();
+});
+Router.events.on('routeChangeComplete', () => NProgress.done());
+Router.events.on('routeChangeError', () => NProgress.done());
 
 export default function MyApp({ Component, pageProps }) {
     return (
