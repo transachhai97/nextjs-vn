@@ -16,6 +16,10 @@ const nextConfig = {
             '@': path.resolve(__dirname, 'src'),
         };
 
+        if (isServer) {
+            require('./scripts/generate-sitemap')
+        }
+
         // Important: return the modified config
         return config;
     },
