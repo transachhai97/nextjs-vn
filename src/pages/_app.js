@@ -2,13 +2,18 @@ import React from 'react';
 import Head from 'next/head';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import whyDidYouRender from '@welldone-software/why-did-you-render';
-import Toastify from '@/components/Toastify';
+import Toastify from '@/components/Toastify/Toastify';
 import Router from 'next/router';
 import NProgress from 'nprogress';
 
+import isDev from '@/app/env';
+import ChangeLanguage from '@/components/ChangeLanguage/ChangeLanguage';
+
+import '@/locales/i18n';
+
 import '@/styles/index.scss';
 
-if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
+if (typeof window !== 'undefined' && isDev) {
     whyDidYouRender(React);
 }
 
@@ -50,6 +55,7 @@ export default function MyApp({ Component, pageProps }) {
                 <meta name="theme-color" content="#317EFB" />
             </Head>
             <Toastify />
+            <ChangeLanguage />
             <Component {...pageProps} />
         </>
     );

@@ -1,9 +1,13 @@
 import Head from 'next/head';
 import { toast } from 'react-toastify';
 
+import { useTranslation } from 'react-i18next';
+
 import styles from '@/styles/Home.scss';
 
 function Home() {
+    const { t } = useTranslation();
+
     return (
         <div className={styles.container}>
             <Head>
@@ -21,6 +25,7 @@ function Home() {
                     <code className={styles.code}>pages/index.js</code>
                 </p>
 
+                <p className="text-6xl">{t('hello')}</p>
                 <button
                     type="button"
                     className={styles.btnNotify}
