@@ -5,6 +5,8 @@ const withPWA = require('next-pwa');
 const runtimeCaching = require('next-pwa/cache');
 // eslint-disable-next-line import/no-extraneous-dependencies
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+// eslint-disable-next-line import/no-extraneous-dependencies
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 const {
     WebpackBundleSizeAnalyzerPlugin,
@@ -33,6 +35,12 @@ const nextConfig = {
             // eslint-disable-next-line global-require
             require('./scripts/generate-sitemap');
         }
+
+        config.plugins.push(
+            new StyleLintPlugin({
+                files: ['src/**/*.{js,jsx,htm,html,css,sss,less,scss,sass}'],
+            })
+        );
 
         if (ANALYZE) {
             newConfig.plugins.push(
