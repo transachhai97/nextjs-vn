@@ -1,5 +1,11 @@
 import Head from 'next/head'
+import whyDidYouRender from '@welldone-software/why-did-you-render'
+
 import '@/styles/globals.css'
+
+if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
+    whyDidYouRender(React)
+}
 
 export default function MyApp({Component, pageProps}) {
     return (
