@@ -18,6 +18,10 @@
 /out_functions/
 /404.html
 
+# public
+/public/sw.js
+/public/workbox-*.js
+
 # production
 /build
 
