@@ -27,7 +27,9 @@
     "react-dom": "16.13.1",
     "react-i18next": "^11.7.2",
     "react-toastify": "^6.0.8",
-    "tailwindcss": "^1.8.5"
+    "tailwindcss": "^1.8.5",
+    "tailwindcss-dark-mode": "^1.1.6",
+    "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
     "@welldone-software/why-did-you-render": "^5.0.0-alpha.2",

@@ -114,7 +114,8 @@ module.exports = withPlugins(
                         if (
                             pathLocalName.includes('src/styles/index.scss') ||
                             pathLocalName.includes('src\\styles\\index.scss') ||
-                            pathLocalName.includes('node_modules')
+                            pathLocalName.includes('node_modules') ||
+                            localName === 'mode-dark'
                         ) {
                             return localName;
                         }

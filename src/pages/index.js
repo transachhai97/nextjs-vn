@@ -25,7 +25,7 @@ function Home() {
                     <code className={styles.code}>pages/index.js</code>
                 </p>
 
-                <p className="text-6xl">{t('hello')}</p>
+                <p className={styles.textHello}>{t('hello')}</p>
                 <button
                     type="button"
                     className={styles.btnNotify}

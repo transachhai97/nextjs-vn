@@ -150,3 +150,18 @@
         ;
     }
 }
+
+.textHello {
+    @apply
+        text-6xl
+        bg-white
+        text-black
+    ;
+
+    .mode-dark & {
+        @apply
+            bg-black
+            text-white
+        ;
+    }
+}

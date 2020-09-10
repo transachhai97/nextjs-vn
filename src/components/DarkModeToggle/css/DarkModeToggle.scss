@@ -1,0 +1,31 @@
+.darkMode {
+    position: fixed;
+    top: 20vh;
+    right: 5vw;
+
+    @apply
+        bg-white
+        text-black
+        border
+        rounded
+    ;
+
+    button {
+        @apply
+            font-bold
+            px-2
+            py-4
+        ;
+    }
+
+    .mode-dark & {
+        @apply
+            bg-black
+            text-white
+        ;
+    }
+}
+
+.mode-dark .darkMode button {
+
+}

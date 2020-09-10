@@ -9,6 +9,7 @@ import NProgress from 'nprogress';
 import isDev from '@/app/env';
 import ChangeLanguage from '@/components/ChangeLanguage/ChangeLanguage';
 import ScrollProgress from '@/components/ScrollProgress/ScrollProgress';
+import DarkModeToggle from '@/components/DarkModeToggle/DarkModeToggle';
 
 import '@/locales/i18n';
 
@@ -57,6 +58,7 @@ export default function MyApp({ Component, pageProps }) {
             </Head>
             <ScrollProgress />
             <Toastify />
+            <DarkModeToggle />
             <ChangeLanguage />
             <Component {...pageProps} />
         </>
