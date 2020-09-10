@@ -91,6 +91,9 @@ module.exports = withPlugins(
                     dest: 'public',
                     runtimeCaching,
                 },
+                workboxOptions: {
+                    exclude: [/docs/],
+                },
             },
         ],
         [
