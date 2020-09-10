@@ -8,6 +8,7 @@ import NProgress from 'nprogress';
 
 import isDev from '@/app/env';
 import ChangeLanguage from '@/components/ChangeLanguage/ChangeLanguage';
+import ScrollProgress from '@/components/ScrollProgress/ScrollProgress';
 
 import '@/locales/i18n';
 
@@ -54,6 +55,7 @@ export default function MyApp({ Component, pageProps }) {
                 <link rel="apple-touch-icon" href="/apple-icon.png" />
                 <meta name="theme-color" content="#317EFB" />
             </Head>
+            <ScrollProgress />
             <Toastify />
             <ChangeLanguage />
             <Component {...pageProps} />
