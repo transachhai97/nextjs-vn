@@ -89,6 +89,7 @@ module.exports = withPlugins(
                 pwa: {
                     disable: !isProduction,
                     dest: 'public',
+                    staticFileGlobsIgnorePatterns: [/\.next\//],
                     runtimeCaching,
                 },
                 workboxOptions: {
