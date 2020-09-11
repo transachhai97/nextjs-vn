@@ -90,9 +90,7 @@ module.exports = withPlugins(
                     disable: !isProduction,
                     dest: 'public',
                     runtimeCaching,
-                },
-                workboxOptions: {
-                    exclude: [/docs/],
+                    buildExcludes: [/.*docs.*$/, /.*chunks.*$/],
                 },
             },
         ],
