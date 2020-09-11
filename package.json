@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "outdated": "yarn outdated",
     "docsify": "docsify serve docs --port 1234",
     "analyze": "cross-env ANALYZE=true yarn build && cat .next/stats.txt",
     "stylelint": "stylelint \"src/**/*.{js,jsx,htm,html,css,sss,less,scss,sass}\" --fix",
